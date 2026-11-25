@@ -1,0 +1,549 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf8f5;
+}
+
+/* ENCABEZADO */
+
+header {
+    width: 100%;
+    height: 62px;
+    background-color: #faf8f5;
+    border-bottom: 2px solid #e5e1dc;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #e6532e;
+    color: white;
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 14px;
+    color: #292929;
+}
+
+/* MENÚ */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #77716c;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e6532e;
+}
+
+/* SECCIÓN INICIO */
+
+.inicio {
+    min-height: 500px;
+    padding: 70px 6%;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(250, 235, 224, 0.98) 0%,
+            rgba(250, 235, 224, 0.92) 35%,
+            rgba(250, 235, 224, 0.75) 50%,
+            rgba(250, 235, 224, 0.20) 80%,
+            rgba(250, 235, 224, 0.05) 100%
+        ),
+        url("../img/diseño imagen.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* CONTENIDO */
+
+.contenido {
+    max-width: 530px;
+    position: relative;
+    z-index: 1;
+}
+
+.etiqueta {
+    color: #e6532e;
+    font-size: 12px;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 600;
+}
+
+.contenido h1 {
+    font-size: 46px;
+    line-height: 1.05;
+    color: #25211f;
+    margin-bottom: 15px;
+}
+
+.contenido p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #625c57;
+    margin-bottom: 22px;
+}
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+.botones a {
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-principal {
+    background-color: #e6532e;
+    color: white;
+}
+
+.btn-principal:hover {
+    background-color: #c94322;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    border: 1px solid #d8bfb0;
+    color: #25211f;
+}
+
+.btn-secundario:hover {
+    background-color: #faf0e9;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .logo h2 {
+        font-size: 11px;
+    }
+
+    .inicio {
+        min-height: 500px;
+        padding: 50px 6%;
+    }
+
+    .contenido h1 {
+        font-size: 35px;
+    }
+}
+
+
+
+/* SOBRE MÍ */
+
+.sobre-mi {
+    background-color: #FCE5D8;
+    padding: 60px 6%;
+    min-height: 280px;
+}
+
+.sobre-mi h2 {
+    font-size: 22px;
+    color: #25211F;
+    margin-bottom: 22px;
+}
+
+.sobre-contenido {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* CÍRCULO */
+
+.sobre-circulo {
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        to right,
+        #E6532E,
+        #E8DCD2
+    );
+}
+
+/* DESCRIPCIÓN */
+
+.sobre-contenido p {
+    max-width: 490px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #77716C;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .sobre-mi {
+        padding: 45px 6%;
+    }
+
+    .sobre-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+}
+
+
+
+/* SECCIÓN PROYECTOS */
+
+.proyectos {
+    background-color: #FCE5D8;
+    padding: 40px 6%;
+    min-height: 280px;
+}
+
+.proyectos h2 {
+    font-size: 22px;
+    color: #25211F;
+    margin-bottom: 16px;
+}
+
+/* CONTENEDOR DE PROYECTOS */
+
+.proyectos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+/* TARJETAS */
+
+.tarjeta-proyecto {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* IMÁGENES */
+
+.tarjeta-proyecto img {
+    width: 100%;
+    height: 86px;
+    object-fit: cover;
+    border-radius: 7px;
+    display: block;
+}
+
+/* TÍTULOS */
+
+.tarjeta-proyecto h3 {
+    font-size: 12px;
+    color: #25211F;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+/* DESCRIPCIONES */
+
+.tarjeta-proyecto p {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #77716C;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 700px) {
+
+    .proyectos-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .proyectos-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* SECCIÓN HABILIDADES */
+
+.habilidades {
+    background-color: #FCE5D8;
+    padding: 40px 6%;
+    min-height: 160px;
+}
+
+.habilidades h2 {
+    font-size: 22px;
+    color: #25211F;
+    margin-bottom: 15px;
+}
+
+/* LISTA DE HABILIDADES */
+
+.habilidades-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ETIQUETAS */
+
+.habilidad {
+    background-color: #FFFFFF;
+    color: #44403D;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: normal;
+
+    transition: 0.3s;
+}
+
+.habilidad:hover {
+    background-color: #E6532E;
+    color: #FFFFFF;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .habilidades {
+        padding: 35px 6%;
+    }
+
+    .habilidades-lista {
+        gap: 8px;
+    }
+
+}
+
+
+
+/* GALERÍA DE PROYECTOS */
+
+.galeria-proyectos {
+    background-color: #FCE5D8;
+    padding: 35px 6%;
+}
+
+/* INTRODUCCIÓN */
+
+.galeria-etiqueta {
+    color: #E6532E;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.galeria-intro h2 {
+    font-size: 32px;
+    color: #25211F;
+    margin: 8px 0;
+}
+
+.galeria-intro p {
+    max-width: 300px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #77716C;
+}
+
+/* FILTROS */
+
+.filtros-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 15px 0;
+}
+
+.filtro {
+    border: none;
+    background-color: white;
+    color: #333;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover,
+.filtro.activo {
+    background-color: #E6532E;
+    color: white;
+}
+
+/* CUADRÍCULA */
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* TARJETAS */
+
+.proyecto-card {
+    background-color: white;
+    padding: 9px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* IMÁGENES */
+
+.proyecto-card img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 7px;
+}
+
+/* CATEGORÍAS */
+
+.proyecto-card .categoria {
+    display: block;
+    color: #E6532E;
+    font-size: 8px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* TÍTULOS */
+
+.proyecto-card h3 {
+    font-size: 12px;
+    color: #25211F;
+    margin-bottom: 5px;
+}
+
+/* DESCRIPCIÓN */
+
+.proyecto-card p {
+    font-size: 9px;
+    color: #77716C;
+    margin-bottom: 7px;
+    line-height: 1.4;
+}
+
+/* ENLACE */
+
+.proyecto-card a {
+    color: #E6532E;
+    font-size: 9px;
+    text-decoration: none;
+}
+
+.proyecto-card a:hover {
+    text-decoration: underline;
+}
+
+/* TABLETS */
+
+@media (max-width: 800px) {
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 500px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-intro h2 {
+        font-size: 27px;
+    }
+
+}
+
